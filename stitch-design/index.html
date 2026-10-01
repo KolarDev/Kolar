@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "terracotta-tint": "rgba(217, 93, 57, 0.08)", "primary-fixed": "#ffdbd1", "inverse-primary": "#ffb5a0", "secondary-container": "#e6e2df", "inverse-on-surface": "#f5f0ed", "secondary": "#605e5c", "on-error-container": "#93000a", "error-container": "#ffdad6", "surface-container-high": "#ece7e5", "surface-container-low": "#f7f3f0", "secondary-fixed": "#e6e2df", "canvas-base": "#FBF9F5", "on-tertiary-fixed-variant": "#862200", "on-primary": "#ffffff", "on-tertiary-fixed": "#3b0900", "on-tertiary": "#ffffff", "primary-fixed-dim": "#ffb5a0", "surface-bright": "#fdf8f6", "on-secondary-fixed": "#1c1b1a", "inverse-surface": "#32302f", "on-secondary-fixed-variant": "#484645", "outline-variant": "#dfc0b7", "canvas-subtle": "#F5F1EA", "primary-container": "#c54f2c", "ash-dark": "#171615", "on-surface-variant": "#58423c", "tertiary-fixed-dim": "#ffb5a0", "on-primary-fixed-variant": "#862201", "surface-container-highest": "#e6e2df", "on-secondary": "#ffffff", "terracotta-soft": "#E26D46", "background": "#fdf8f6", "surface-dim": "#ddd9d7", "secondary-fixed-dim": "#cac6c4", "ash-charcoal": "#1F1E1D", "on-secondary-container": "#666462", "ash-border": "rgba(23, 22, 21, 0.12)", "tertiary": "#a43714", "on-surface": "#1c1b1a", "terracotta-accent": "#D95D39", "primary": "#a43716", "surface-container-lowest": "#ffffff", "on-background": "#1c1b1a", "surface-container": "#f2edeb", "terracotta-deep": "#C8502C", "error": "#ba1a1a", "outline": "#8b716a", "on-primary-fixed": "#3b0900", "surface-variant": "#e6e2df", "tertiary-fixed": "#ffdbd1", "surface": "#fdf8f6", "surface-tint": "#a73918", "canvas-muted": "#EAE5DC", "tertiary-container": "#c64e2a", "on-tertiary-container": "#fffbff", "on-error": "#ffffff", "on-primary-container": "#fffbff" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "gutter": "1.5rem", "gutter-mobile": "1rem", "space-xl": "3rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "margin-mobile": "1.25rem", "space-lg": "1.75rem", "margin": "3.5rem", "space-md": "1rem" }, fontFamily: { sans: ["Epilogue", "sans-serif"], "editorial": ["Epilogue", "sans-serif"] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100%;background-color:#FBF9F5;color:#1c1b1a;font-family:'Epilogue',sans-serif;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}#editorial-nav-overlay.open{opacity:1;pointer-events:auto;transform:translateY(0);}#editorial-nav-overlay{opacity:0;pointer-events:none;transform:translateY(-8px);transition:all 220ms cubic-bezier(0.16, 1, 0.3, 1);}</style></head><body class="bg-canvas-base text-on-surface font-sans flex flex-col min-h-screen relative selection:bg-terracotta-tint selection:text-terracotta-accent"><header class="fixed top-0 w-full z-50 bg-canvas-base/90 backdrop-blur-xl border-b border-surface-container-high/60 pt-safe"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-2.5"><span class="h-7 w-7 rounded-full overflow-hidden flex items-center justify-center shrink-0 border border-ash-dark/10"><img alt="Muhyideen Studio Monogram" class="h-full w-full object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UIvfQCgbRXUz2QLe5pBDUbUqbjIn9Dvhroar3zUnVsohleC4_9N38lBQwLnfYL7M4bqwWcmgNt2twYfOvwWrdE3nVTdp4tQTUfUPTh50GSvwDcaQhmUUNfX7mY2H_ilsM7YycqA3FZJmD4dGsieCdcJdDM0RIDfvpeGFdLTTG3XauUsr2ci-8kWjAdVkKKciJkMYkHT9h3agDQYc0izVhS4LM_L7cRc6AencVnZ9-QX1xRyy1sWSj5am8"/></span><span class="font-bold text-ash-dark text-base tracking-tight leading-none">Muhyideen Abdulbasit</span></div><div class="flex items-center gap-space-xs"><button aria-label="Toggle Navigation Menu" class="w-10 h-10 flex items-center justify-center text-ash-dark hover:text-terracotta-accent transition-colors" id="menu-toggle-btn" onclick="const overlay = document.getElementById('editorial-nav-overlay'); overlay.classList.toggle('open');"><span class="material-symbols-outlined text-[22px]">menu</span></button></div></div></header><div class="fixed inset-x-0 top-20 z-40 bg-canvas-subtle/95 backdrop-blur-2xl shadow-[0_8px_24px_rgba(23,22,21,0.08)] px-gutter-mobile py-space-lg mx-margin-mobile rounded-xl" id="editorial-nav-overlay"><div class="flex flex-col gap-space-md"><div class="flex justify-between items-center pb-space-xs"><span class="text-xs font-semibold uppercase tracking-widest text-terracotta-accent">Navigation Index</span><button class="w-10 h-10 flex items-center justify-center text-ash-dark" onclick="document.getElementById('editorial-nav-overlay').classList.remove('open')"><span class="material-symbols-outlined text-[20px]">close</span></button></div><div class="grid grid-cols-1 gap-space-xs"><a class="text-ash-charcoal hover:text-terracotta-accent py-space-xs transition-colors flex items-center justify-between font-medium" data-path="work" href="#" onclick="document.getElementById('editorial-nav-overlay').classList.remove('open')"><span class="text-lg">Work</span><span class="text-xs text-secondary tracking-wide">01</span></a><a class="text-ash-charcoal hover:text-terracotta-accent py-space-xs transition-colors flex items-center justify-between font-medium" data-path="about" href="#" onclick="document.getElementById('editorial-nav-overlay').classList.remove('open')"><span class="text-lg">About</span><span class="text-xs text-secondary tracking-wide">02</span></a><a class="text-ash-charcoal hover:text-terracotta-accent py-space-xs transition-colors flex items-center justify-between font-medium" data-path="lab" href="#" onclick="document.getElementById('editorial-nav-overlay').classList.remove('open')"><span class="text-lg">Lab</span><span class="text-xs text-secondary tracking-wide">03</span></a><a class="text-ash-charcoal hover:text-terracotta-accent py-space-xs transition-colors flex items-center justify-between font-medium" data-path="writing" href="#" onclick="document.getElementById('editorial-nav-overlay').classList.remove('open')"><span class="text-lg">Writing</span><span class="text-xs text-secondary tracking-wide">04</span></a><a class="text-ash-charcoal hover:text-terracotta-accent py-space-xs transition-colors flex items-center justify-between font-medium" data-path="contact" href="#" onclick="document.getElementById('editorial-nav-overlay').classList.remove('open')"><span class="text-lg">Contact</span><span class="text-xs text-secondary tracking-wide">05</span></a></div></div></div><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-canvas-base min-h-screen"><div class="flex flex-col w-full selection:bg-terracotta-tint selection:text-terracotta-accent">
+<!-- HERO SECTION -->
+<section class="flex flex-col px-margin-mobile pt-space-lg pb-space-lg">
+<!-- Status Pill -->
+<div class="flex items-center gap-space-xs mb-space-sm">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-ash-charcoal">
+<span class="w-2 h-2 rounded-full bg-terracotta-accent"></span>
+<span class="text-[11px] font-medium tracking-wide text-terracotta-accent uppercase">Available for projects</span>
+</span>
+</div>
+<!-- Expressive Dominant Hero Headline -->
+<div class="flex flex-col gap-space-xs mb-space-sm">
+<h1 class="text-[2.5rem] leading-[2.85rem] font-bold text-ash-dark tracking-tight">
+        I build software that works when it matters.
+      </h1>
+</div>
+<!-- Natural Supporting Statement -->
+<p class="text-[1.05rem] leading-relaxed text-on-surface-variant font-normal mb-space-md">
+      Designing resilient backend systems, robust full-stack platforms, cloud infrastructure, and practical AI.
+    </p>
+<!-- Clean Action Buttons -->
+<div class="flex items-center gap-space-sm mb-space-lg">
+<a class="inline-flex items-center justify-center gap-2 px-space-md py-3 rounded-lg bg-ash-charcoal text-canvas-base text-sm font-medium shadow-md active:scale-95 transition-transform" href="#work">
+<span>Explore my work</span>
+<span class="material-symbols-outlined text-[16px] text-terracotta-accent">arrow_forward</span>
+</a>
+<a class="inline-flex items-center gap-1.5 px-space-xs py-3 text-sm font-medium text-ash-dark group" href="#contact">
+<span class="underline decoration-terracotta-accent decoration-2 underline-offset-4">Let's talk</span>
+<span class="material-symbols-outlined text-[16px] text-secondary group-hover:translate-x-0.5 transition-transform">north_east</span>
+</a>
+</div>
+<!-- Tactile Hero Art Frame -->
+<div class="relative w-full rounded-xl overflow-hidden bg-canvas-subtle p-2 shadow-md">
+<div class="relative w-full aspect-[4/3] rounded-lg overflow-hidden bg-canvas-muted">
+<img alt="Architectural relief sculpture composition with layered terracotta stone, charred ash wood, and warm sand tones" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XaciFVJ6ulMre5CTuO-YmW1zTMt4WsLZ-K5JMtkbmimKzp2RqFArJxY7vOBCA9Hoe3eUfuR2MR2bj67fYsiTqefmCGdJ1gZzKaISMuw0gxo7fd3VjTuYVIuWR6tdabAyushYxCJtMmxKIgWOKNp4hLM0Fhf-kzGsDHruiHaKUfbOdmsCe1k9Tj-SljDWZc1eV_JamKpRb3kTNx9FHEd1dBbj2KmRkmAccXLSZh8wfeMG36M1n6LrmQ5GSh"/>
+<div class="absolute inset-0 bg-gradient-to-t from-ash-dark/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-canvas-base">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-terracotta-soft">token</span>
+<span class="text-xs font-semibold uppercase tracking-wider text-canvas-base">Origin &amp; Foundations</span>
+</div>
+<span class="text-xs font-medium px-2 py-0.5 rounded bg-ash-charcoal/80 text-primary-fixed-dim">
+            Latency 4.8ms
+          </span>
+</div>
+</div>
+<div class="pt-2 pb-1 px-1 flex items-center justify-between text-secondary">
+<span class="text-xs tracking-wide">Artifact ARCH-018</span>
+<span class="text-xs font-semibold text-terracotta-deep uppercase">Studio Edition</span>
+</div>
+</div>
+</section>
+<!-- CHAPTER 01: WHO I AM -->
+<section class="flex flex-col px-margin-mobile py-space-md">
+<div class="flex items-center gap-2 mb-space-xs">
+<span class="text-xs font-semibold tracking-wider text-terracotta-accent uppercase">01 Philosophy</span>
+<span class="h-px flex-1 bg-surface-container-high"></span>
+</div>
+<h2 class="text-2xl font-bold text-ash-dark tracking-tight mb-space-xs">
+      Let's start with who I am.
+    </h2>
+<p class="text-sm leading-relaxed text-on-surface-variant mb-space-sm font-normal">
+      I view code as structural masonry. Writing robust software isn't just about clearing pull requests — it's the deliberate discipline of subtracting accidental complexity until only enduring utility remains.
+    </p>
+<!-- Warm Earthy Quote Card -->
+<div class="p-space-md rounded-xl bg-canvas-subtle shadow-sm flex flex-col gap-2 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-24 h-24 bg-terracotta-tint rounded-full -mr-8 -mt-8 pointer-events-none"></div>
+<span class="material-symbols-outlined text-terracotta-accent text-[28px]">format_quote</span>
+<p class="text-base text-ash-charcoal font-medium italic leading-relaxed">
+        “Simplicity is the prerequisite for reliability. We build systems that age like stone, not plastic.”
+      </p>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="text-xs uppercase font-semibold text-secondary tracking-wide">Core Doctrine</span>
+<span class="text-xs font-medium text-terracotta-accent">Engineering as Craft</span>
+</div>
+</div>
+</section>
+<!-- CHAPTER 02: WHAT I BUILD -->
+<section class="flex flex-col px-margin-mobile py-space-md" id="work">
+<div class="flex items-center gap-2 mb-space-xs">
+<span class="text-xs font-semibold tracking-wider text-terracotta-accent uppercase">02 Selected Work</span>
+<span class="h-px flex-1 bg-surface-container-high"></span>
+</div>
+<div class="flex items-baseline justify-between mb-space-sm">
+<h2 class="text-2xl font-bold text-ash-dark tracking-tight">
+        Here's what I build.
+      </h2>
+<span class="text-xs text-secondary font-medium tracking-wide">2 of 14</span>
+</div>
+<!-- Project 01 Card -->
+<div class="flex flex-col rounded-xl bg-canvas-subtle overflow-hidden mb-space-md shadow-sm">
+<div class="w-full h-44 bg-surface-container-high relative flex items-center justify-center p-space-sm">
+<img class="w-full h-full object-cover rounded-lg" data-alt="Minimalist architectural diagram rendering of high throughput event streams on warm volcanic textured parchment with burnt orange terracotta traces and subtle geometric nodes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0LlP0cNlwNE9MB2sGtNKpWi3wIdN3EozfCMKQWOFjgVNsijUb6t3KFkJ_wDgeYyWFeEZxrEace2atcXt-SpEeXTTpgvyrn7J4crRuU5zy_ToSurxWoplz5M35zI3Nt4EFFx8tCTGyFsdXgLczPAM9cHPyNV30TfTVjvBjn_P1Xha0YuLuJRTmJGo2rMCdAs9zkBvJKjU_oCRAwpPrgZnnaupR2TbWEO_nLQluvgM5ghpOZF9pCtCGFQ"/>
+<span class="absolute top-3 left-3 px-2 py-0.5 rounded bg-ash-charcoal/80 text-canvas-base text-xs font-medium tracking-wide">
+          Streaming Architecture
+        </span>
+</div>
+<div class="p-space-md flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<h3 class="text-lg font-bold text-ash-dark">Aetheria Engine</h3>
+<span class="material-symbols-outlined text-secondary text-[20px]">call_made</span>
+</div>
+<p class="text-xs leading-relaxed text-on-surface-variant font-normal">
+          Distributed event pipeline and latency-critical streaming architecture processing 180k msgs/sec with deterministic memory envelopes.
+        </p>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="text-[11px] font-medium px-2 py-0.5 rounded bg-canvas-base text-ash-charcoal">Rust</span>
+<span class="text-[11px] font-medium px-2 py-0.5 rounded bg-canvas-base text-ash-charcoal">Apache Kafka</span>
+<span class="text-[11px] font-medium px-2 py-0.5 rounded bg-canvas-base text-ash-charcoal">Distributed Systems</span>
+<span class="text-[11px] font-medium px-2 py-0.5 rounded bg-terracotta-tint text-terracotta-accent">Sub-millisecond</span>
+</div>
+</div>
+</div>
+<!-- Project 02 Card -->
+<div class="flex flex-col rounded-xl bg-canvas-subtle overflow-hidden shadow-sm">
+<div class="w-full h-44 bg-surface-container-high relative flex items-center justify-center p-space-sm">
+<img class="w-full h-full object-cover rounded-lg" data-alt="Elegant tactile user interface for creative generative AI dashboard with warm earthy typography, refined metadata chips, and soft parchment surface lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEFZULelAkofsrme1_IcciagrDePT0a_AMsmVPp8WojnHgWUOH7TqqjWddaLOLq7EZOhOZaKqsmsVd3FFAPpojIYlFw7A02tnnz7T_ld8zokAvT2WkBwxPfu9zNdLZg390-j9fsU35cdG2xkPDwWOMWcBxB9TR50ZFOoVHAz276K-jCvDmk5xvwgf9sAFm1xyNREiWkEMZpjlOFubegRiNerSZ8wmzCqHjVVKvRVOPTwg0qPxIuz-1HA"/>
+<span class="absolute top-3 left-3 px-2 py-0.5 rounded bg-ash-charcoal/80 text-canvas-base text-xs font-medium tracking-wide">
+          Full Stack Product
+        </span>
+</div>
+<div class="p-space-md flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<h3 class="text-lg font-bold text-ash-dark">Komorebi Platform</h3>
+<span class="material-symbols-outlined text-secondary text-[20px]">call_made</span>
+</div>
+<p class="text-xs leading-relaxed text-on-surface-variant font-normal">
+          Full-stack generative AI product with humane conversational interfaces, multimodal indexing, and real-time canvas synthesis.
+        </p>
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="text-[11px] font-medium px-2 py-0.5 rounded bg-canvas-base text-ash-charcoal">TypeScript</span>
+<span class="text-[11px] font-medium px-2 py-0.5 rounded bg-canvas-base text-ash-charcoal">Go</span>
+<span class="text-[11px] font-medium px-2 py-0.5 rounded bg-canvas-base text-ash-charcoal">PyTorch</span>
+<span class="text-[11px] font-medium px-2 py-0.5 rounded bg-terracotta-tint text-terracotta-accent">Generative AI</span>
+</div>
+</div>
+</div>
+</section>
+<!-- CHAPTER 03: SOFTWARE BEHIND THE STORY -->
+<section class="flex flex-col px-margin-mobile py-space-md">
+<div class="flex items-center gap-2 mb-space-xs">
+<span class="text-xs font-semibold tracking-wider text-terracotta-accent uppercase">03 Architectural Pillars</span>
+<span class="h-px flex-1 bg-surface-container-high"></span>
+</div>
+<h2 class="text-2xl font-bold text-ash-dark tracking-tight mb-space-xs">
+      Here's some of the software behind the story.
+    </h2>
+<p class="text-xs leading-relaxed text-on-surface-variant font-normal mb-space-md">
+      A disciplined stack built on high concurrency, predictable throughput, and expressive interfaces.
+    </p>
+<!-- 2x2 Bento Grid of Pillars -->
+<div class="grid grid-cols-2 gap-2.5">
+<!-- Pillar 1 -->
+<div class="p-space-sm rounded-xl bg-canvas-subtle flex flex-col justify-between h-36 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-terracotta-accent text-[22px]">dns</span>
+<span class="text-xs font-semibold text-secondary">01</span>
+</div>
+<div>
+<h4 class="text-sm text-ash-dark font-bold">Reliable Backends</h4>
+<p class="text-xs text-on-surface-variant mt-0.5 leading-snug">Go, Rust, PostgreSQL, Raft consensus protocols.</p>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="p-space-sm rounded-xl bg-canvas-subtle flex flex-col justify-between h-36 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-terracotta-accent text-[22px]">devices</span>
+<span class="text-xs font-semibold text-secondary">02</span>
+</div>
+<div>
+<h4 class="text-sm text-ash-dark font-bold">Human Interfaces</h4>
+<p class="text-xs text-on-surface-variant mt-0.5 leading-snug">Next.js, Tailwind, WebGL, tactile micro-gestures.</p>
+</div>
+</div>
+<!-- Pillar 3 -->
+<div class="p-space-sm rounded-xl bg-canvas-subtle flex flex-col justify-between h-36 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-terracotta-accent text-[22px]">cloud_sync</span>
+<span class="text-xs font-semibold text-secondary">03</span>
+</div>
+<div>
+<h4 class="text-sm text-ash-dark font-bold">Cloud Systems</h4>
+<p class="text-xs text-on-surface-variant mt-0.5 leading-snug">Kubernetes, Terraform, AWS, zero-trust topologies.</p>
+</div>
+</div>
+<!-- Pillar 4 -->
+<div class="p-space-sm rounded-xl bg-canvas-subtle flex flex-col justify-between h-36 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-terracotta-accent text-[22px]">psychology</span>
+<span class="text-xs font-semibold text-secondary">04</span>
+</div>
+<div>
+<h4 class="text-sm text-ash-dark font-bold">Applied AI Models</h4>
+<p class="text-xs text-on-surface-variant mt-0.5 leading-snug">Embeddings, RAG pipelines, fine-tuning, latency control.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CHAPTER 04: UNDERNEATH THE INTERFACE -->
+<section class="flex flex-col px-margin-mobile py-space-md">
+<div class="flex items-center gap-2 mb-space-xs">
+<span class="text-xs font-semibold tracking-wider text-terracotta-accent uppercase">04 Telemetry &amp; Benchmarks</span>
+<span class="h-px flex-1 bg-surface-container-high"></span>
+</div>
+<h2 class="text-2xl font-bold text-ash-dark tracking-tight mb-space-xs">
+      Let's go underneath the interface.
+    </h2>
+<p class="text-xs leading-relaxed text-on-surface-variant font-normal mb-space-sm">
+      Observability metrics from production nodes under peak stress testing.
+    </p>
+<!-- Telemetry Card with Clean Rows -->
+<div class="rounded-xl bg-canvas-subtle p-space-sm shadow-sm flex flex-col gap-2">
+<!-- Live SVG sparkline metric -->
+<div class="bg-canvas-base rounded-lg p-space-sm flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="text-xs font-semibold text-ash-charcoal uppercase tracking-wide">P99 Cluster Throughput</span>
+<span class="text-xs font-semibold text-terracotta-accent">1.4ms Avg</span>
+</div>
+<!-- SVG Sparkline -->
+<svg class="w-full h-12 text-terracotta-accent" fill="none" stroke="currentColor" viewbox="0 0 300 48">
+<path d="M0,38 L30,34 L60,36 L90,24 L120,28 L150,14 L180,18 L210,8 L240,16 L270,10 L300,12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+<path d="M0,38 L30,34 L60,36 L90,24 L120,28 L150,14 L180,18 L210,8 L240,16 L270,10 L300,12 L300,48 L0,48 Z" fill="rgba(217, 93, 57, 0.08)" stroke="none"></path>
+</svg>
+</div>
+<!-- Clean Spec Rows -->
+<div class="flex flex-col rounded-lg overflow-hidden text-ash-charcoal">
+<div class="flex items-center justify-between px-3 py-2 bg-canvas-base text-xs">
+<span class="text-secondary font-medium">Concurrency Limit</span>
+<span class="font-semibold text-ash-dark">120,000 WSS</span>
+</div>
+<div class="flex items-center justify-between px-3 py-2 bg-canvas-subtle text-xs">
+<span class="text-secondary font-medium">Uptime SLA (TTM)</span>
+<span class="font-semibold text-ash-dark">99.992%</span>
+</div>
+<div class="flex items-center justify-between px-3 py-2 bg-canvas-base text-xs">
+<span class="text-secondary font-medium">GC Stall Duration</span>
+<span class="font-semibold text-terracotta-accent">&lt; 320μs</span>
+</div>
+<div class="flex items-center justify-between px-3 py-2 bg-canvas-subtle text-xs">
+<span class="text-secondary font-medium">Cache Hit Ratio</span>
+<span class="font-semibold text-ash-dark">97.4% L1/L2</span>
+</div>
+</div>
+</div>
+</section>
+<!-- CHAPTER 05: ESSAYS & WRITING -->
+<section class="flex flex-col px-margin-mobile py-space-md">
+<div class="flex items-center gap-2 mb-space-xs">
+<span class="text-xs font-semibold tracking-wider text-terracotta-accent uppercase">05 Field Notes</span>
+<span class="h-px flex-1 bg-surface-container-high"></span>
+</div>
+<h2 class="text-2xl font-bold text-ash-dark tracking-tight mb-space-xs">
+      Sometimes I write down what I learn.
+    </h2>
+<p class="text-xs leading-relaxed text-on-surface-variant font-normal mb-space-sm">
+      Post-mortems, architectural patterns, and honest reflections on software longevity.
+    </p>
+<!-- Essay 01 -->
+<a class="p-space-md rounded-xl bg-canvas-subtle mb-space-xs shadow-sm flex flex-col gap-1 active:scale-[0.99] transition-transform" href="#">
+<div class="flex items-center justify-between">
+<span class="text-xs font-semibold text-terracotta-accent tracking-wide uppercase">Essay · 8 min read</span>
+<span class="text-xs text-secondary font-medium">Oct 2024</span>
+</div>
+<h3 class="text-base font-bold text-ash-dark leading-snug">
+        Why We Trade Microservices for Modular Monoliths (And When to Switch Back)
+      </h3>
+<p class="text-xs leading-relaxed text-on-surface-variant font-normal">
+        A pragmatic look at operational tax, network hops, and why team topology determines code structure more than Kubernetes does.
+      </p>
+</a>
+<!-- Essay 02 -->
+<a class="p-space-md rounded-xl bg-canvas-subtle shadow-sm flex flex-col gap-1 active:scale-[0.99] transition-transform" href="#">
+<div class="flex items-center justify-between">
+<span class="text-xs font-semibold text-terracotta-accent tracking-wide uppercase">Field Log · 5 min read</span>
+<span class="text-xs text-secondary font-medium">Jul 2024</span>
+</div>
+<h3 class="text-base font-bold text-ash-dark leading-snug">
+        Zero-Downtime Data Migrations on Edge Networks
+      </h3>
+<p class="text-xs leading-relaxed text-on-surface-variant font-normal">
+        Shadow writing, dual-phase replication, and graceful rollback strategies without dropping a single active packet.
+      </p>
+</a>
+</section>
+<!-- CHAPTER 06: WHERE I'VE BEEN (TIMELINE) -->
+<section class="flex flex-col px-margin-mobile py-space-md">
+<div class="flex items-center gap-2 mb-space-xs">
+<span class="text-xs font-semibold tracking-wider text-terracotta-accent uppercase">06 Chronology</span>
+<span class="h-px flex-1 bg-surface-container-high"></span>
+</div>
+<h2 class="text-2xl font-bold text-ash-dark tracking-tight mb-space-sm">
+      Here's where I've been.
+    </h2>
+<div class="flex flex-col gap-3">
+<!-- Milestone 01 -->
+<div class="flex gap-3 p-space-sm rounded-xl bg-canvas-subtle shadow-sm items-start">
+<div class="w-8 h-8 rounded-full bg-ash-charcoal text-canvas-base flex items-center justify-center shrink-0 mt-0.5">
+<span class="text-xs font-bold text-terracotta-soft">24</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-baseline justify-between">
+<h4 class="text-sm text-ash-dark font-bold truncate">Lead Infrastructure Engineer</h4>
+<span class="text-xs font-semibold text-terracotta-accent shrink-0 uppercase tracking-wide">Present</span>
+</div>
+<span class="text-xs font-medium text-secondary uppercase tracking-wider">Vertex Protocols</span>
+<p class="text-xs text-on-surface-variant mt-1 leading-snug font-normal">Directing high-frequency streaming core, distributed consensus, and global edge deployments.</p>
+</div>
+</div>
+<!-- Milestone 02 -->
+<div class="flex gap-3 p-space-sm rounded-xl bg-canvas-subtle shadow-sm items-start">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-ash-dark flex items-center justify-center shrink-0 mt-0.5">
+<span class="text-xs font-bold">22</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-baseline justify-between">
+<h4 class="text-sm text-ash-dark font-bold truncate">Senior Full-Stack Architect</h4>
+<span class="text-xs text-secondary font-medium shrink-0">2022 – 2024</span>
+</div>
+<span class="text-xs font-medium text-secondary uppercase tracking-wider">Monolith Labs</span>
+<p class="text-xs text-on-surface-variant mt-1 leading-snug font-normal">Built developer tools platform from seed to Series A; reduced cold-start execution times by 68%.</p>
+</div>
+</div>
+<!-- Milestone 03 -->
+<div class="flex gap-3 p-space-sm rounded-xl bg-canvas-subtle shadow-sm items-start">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-ash-dark flex items-center justify-center shrink-0 mt-0.5">
+<span class="text-xs font-bold">20</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-baseline justify-between">
+<h4 class="text-sm text-ash-dark font-bold truncate">Software Systems Engineer</h4>
+<span class="text-xs text-secondary font-medium shrink-0">2020 – 2022</span>
+</div>
+<span class="text-xs font-medium text-secondary uppercase tracking-wider">Terraformed Corp</span>
+<p class="text-xs text-on-surface-variant mt-1 leading-snug font-normal">Maintained core payment services, asynchronous settlement engines, and bank gateway integrations.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CHAPTER 07: CLOSING INVITATION -->
+<section class="flex flex-col px-margin-mobile pt-space-md pb-space-xl" id="contact">
+<div class="flex items-center gap-2 mb-space-xs">
+<span class="text-xs font-semibold tracking-wider text-terracotta-accent uppercase">07 Transmission</span>
+<span class="h-px flex-1 bg-surface-container-high"></span>
+</div>
+<div class="p-space-lg rounded-xl bg-ash-charcoal text-canvas-base shadow-xl flex flex-col gap-space-sm relative overflow-hidden">
+<!-- Burnt orange ambient warm gradient overlay -->
+<div class="absolute -bottom-16 -right-16 w-48 h-48 bg-terracotta-accent/20 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-center gap-1.5 text-terracotta-soft">
+<span class="material-symbols-outlined text-[18px]">radio_button_checked</span>
+<span class="text-xs font-semibold uppercase tracking-widest text-primary-fixed-dim">Open for Collaboration</span>
+</div>
+<h2 class="text-2xl font-bold text-canvas-base tracking-tight leading-snug">
+        Ready for another connection?
+      </h2>
+<p class="text-sm text-surface-container-highest leading-relaxed font-normal">
+        Whether you are engineering a distributed backend, scaling an ambitious product, or exploring thoughtful architectural systems — let's talk craft.
+      </p>
+<a class="w-full mt-space-xs py-3.5 px-space-md rounded-lg bg-terracotta-accent text-canvas-base text-sm font-semibold flex items-center justify-center gap-2 shadow-md active:scale-95 transition-transform" href="mailto:muhyideen@example.com">
+<span>Let's build something enduring</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<!-- Quick Social Directory -->
+<div class="grid grid-cols-2 gap-2 pt-space-sm">
+<a class="p-2.5 rounded-lg bg-ash-dark text-canvas-base flex items-center justify-between text-xs font-medium hover:text-terracotta-accent transition-colors" href="#">
+<span class="uppercase tracking-wide">GitHub</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">arrow_outward</span>
+</a>
+<a class="p-2.5 rounded-lg bg-ash-dark text-canvas-base flex items-center justify-between text-xs font-medium hover:text-terracotta-accent transition-colors" href="#">
+<span class="uppercase tracking-wide">LinkedIn</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">arrow_outward</span>
+</a>
+<a class="p-2.5 rounded-lg bg-ash-dark text-canvas-base flex items-center justify-between text-xs font-medium hover:text-terracotta-accent transition-colors" href="#">
+<span class="uppercase tracking-wide">Read.cv</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">arrow_outward</span>
+</a>
+<a class="p-2.5 rounded-lg bg-ash-dark text-canvas-base flex items-center justify-between text-xs font-medium hover:text-terracotta-accent transition-colors" href="#">
+<span class="uppercase tracking-wide">Email</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">mail</span>
+</a>
+</div>
+<div class="pt-2 flex items-center justify-between text-secondary">
+<span class="text-[11px] font-medium">Lagos · Remote UTC+1</span>
+<span class="text-[11px] font-medium text-primary-fixed-dim">Copyright © 2025</span>
+</div>
+</div>
+</section>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-canvas-base/90 backdrop-blur-xl border-t border-surface-container-high/60" data-active-classes="text-terracotta-accent font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center gap-1 w-14 h-12 transition-colors duration-150 text-terracotta-accent font-semibold" data-path="work" href="#"><span class="material-symbols-outlined text-[20px]">folder_open</span><span class="text-[10px] tracking-wide font-medium">Work</span></a><a class="flex flex-col items-center justify-center gap-1 w-14 h-12 text-secondary hover:text-terracotta-accent transition-colors duration-150" data-path="about" href="#"><span class="material-symbols-outlined text-[20px]">fingerprint</span><span class="text-[10px] tracking-wide font-medium">About</span></a><a class="flex flex-col items-center justify-center gap-1 w-14 h-12 text-secondary hover:text-terracotta-accent transition-colors duration-150" data-path="lab" href="#"><span class="material-symbols-outlined text-[20px]">science</span><span class="text-[10px] tracking-wide font-medium">Lab</span></a><a class="flex flex-col items-center justify-center gap-1 w-14 h-12 text-secondary hover:text-terracotta-accent transition-colors duration-150" data-path="writing" href="#"><span class="material-symbols-outlined text-[20px]">edit_note</span><span class="text-[10px] tracking-wide font-medium">Writing</span></a><a class="flex flex-col items-center justify-center gap-1 w-14 h-12 text-secondary hover:text-terracotta-accent transition-colors duration-150" data-path="contact" href="#"><span class="material-symbols-outlined text-[20px]">alternate_email</span><span class="text-[10px] tracking-wide font-medium">Contact</span></a></div></nav></body></html>
