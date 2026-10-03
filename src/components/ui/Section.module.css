@@ -1,0 +1,18 @@
+.section {
+  padding-block: var(--section-spacing);
+}
+
+.subtle {
+  background: var(--color-bg-subtle);
+}
+
+.inverse {
+  background: var(--color-inverse-bg);
+  color: var(--color-inverse-text);
+}
+
+.inverse :global(h1),
+.inverse :global(h2),
+.inverse :global(h3) {
+  color: var(--color-inverse-text);
+}

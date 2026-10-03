@@ -1,0 +1,80 @@
+.timeline {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 1.5rem 1fr;
+  gap: 1.25rem;
+}
+
+.marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.markerDot {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 999px;
+  background: var(--color-accent);
+  margin-top: 0.4rem;
+  flex-shrink: 0;
+}
+
+.markerLine {
+  width: 1px;
+  flex: 1;
+  background: var(--color-border-strong);
+  margin-top: 0.25rem;
+}
+
+.content {
+  padding-bottom: 2rem;
+}
+
+.placeholder .role,
+.placeholder .org,
+.placeholder .summary {
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.role {
+  font-size: 1.1rem;
+}
+
+.period {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-accent-text);
+  white-space: nowrap;
+}
+
+.org {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  margin-top: 0.15rem;
+}
+
+.summary {
+  margin-top: 0.5rem;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  max-width: 60ch;
+}

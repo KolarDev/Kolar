@@ -1,0 +1,39 @@
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+.card {
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  background: var(--color-bg-subtle);
+}
+
+.placeholder {
+  border: 1px dashed var(--color-border-strong);
+  background: transparent;
+}
+
+.placeholder .title,
+.placeholder .description {
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+.title {
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

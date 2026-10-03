@@ -1,0 +1,100 @@
+:root {
+  color-scheme: light dark;
+
+  /* Surfaces — warm stone tones, not stark white */
+  --color-bg: #f0e9df;
+  --color-bg-elevated: #f8f3ec;
+  --color-bg-subtle: #e9e1d4;
+  --color-bg-muted: #ded3c1;
+
+  /* Glass — tasteful, not excessive: used on a few key surfaces only */
+  --glass-bg: rgba(255, 252, 247, 0.55);
+  --glass-border: rgba(255, 255, 255, 0.6);
+  --glass-blur: 18px;
+
+  /* Text */
+  --color-text: #3a322b;
+  --color-text-strong: #211b16;
+  --color-text-muted: #685b4f;
+  --color-text-on-accent: #fff9f3;
+
+  /* Accent — burnt orange */
+  --color-accent: #c8502c;
+  --color-accent-text: #8f3417;
+  --color-accent-on-inverse: #e2703f;
+  --color-accent-solid: #8f3417;
+  --color-accent-tint: rgba(200, 80, 44, 0.1);
+  --color-accent-border: rgba(200, 80, 44, 0.35);
+
+  /* Structural */
+  --color-border: rgba(33, 27, 22, 0.12);
+  --color-border-strong: rgba(33, 27, 22, 0.24);
+  --color-inverse-bg: #211b16;
+  --color-inverse-text: #f6efe4;
+  --color-inverse-border: rgba(246, 239, 228, 0.14);
+
+  /* Ambient background wash (behind glass surfaces) */
+  --ambient-accent: rgba(200, 80, 44, 0.28);
+  --ambient-ash: rgba(33, 27, 22, 0.14);
+
+  /* Typography — one distinctive primary typeface, used for both display and body */
+  --font-primary: 'Fraunces', 'Iowan Old Style', 'Georgia', serif;
+  --font-mono: 'Space Mono', ui-monospace, monospace;
+
+  /* Layout */
+  --content-max-width: 72rem;
+  --content-padding-inline: clamp(1.25rem, 4vw, 3rem);
+  --section-spacing: clamp(4rem, 9vw, 7.5rem);
+
+  /* Radii & elevation */
+  --radius-sm: 0.4rem;
+  --radius-md: 0.9rem;
+  --radius-lg: 1.4rem;
+  --shadow-sm: 0 1px 2px rgba(33, 27, 22, 0.08), 0 1px 1px rgba(33, 27, 22, 0.05);
+  --shadow-md: 0 20px 44px -20px rgba(33, 27, 22, 0.32);
+  /* Signature tactile offset — used sparingly for a printmaking feel */
+  --shadow-offset: 5px 5px 0 var(--color-inverse-bg);
+
+  /* Motion */
+  --ease-editorial: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 180ms;
+  --duration-base: 420ms;
+  --duration-slow: 720ms;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Warm charcoal, not crushed black */
+    --color-bg: #24201b;
+    --color-bg-elevated: #332e27;
+    --color-bg-subtle: #2a251f;
+    --color-bg-muted: #3c3429;
+
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+
+    --color-text: #e3d8c9;
+    --color-text-strong: #f5eee3;
+    --color-text-muted: #b3a38e;
+    --color-text-on-accent: #fff9f3;
+
+    --color-accent: #e8784b;
+    --color-accent-text: #e8784b;
+    --color-accent-on-inverse: #9a3b1c;
+    --color-accent-solid: #8f3417;
+    --color-accent-tint: rgba(232, 120, 75, 0.14);
+    --color-accent-border: rgba(232, 120, 75, 0.4);
+
+    --color-border: rgba(245, 238, 228, 0.1);
+    --color-border-strong: rgba(245, 238, 228, 0.22);
+    --color-inverse-bg: #f5eee3;
+    --color-inverse-text: #211b16;
+    --color-inverse-border: rgba(33, 27, 22, 0.1);
+
+    --ambient-accent: rgba(232, 120, 75, 0.2);
+    --ambient-ash: rgba(245, 238, 228, 0.06);
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35), 0 1px 1px rgba(0, 0, 0, 0.22);
+    --shadow-md: 0 24px 48px -20px rgba(0, 0, 0, 0.65);
+  }
+}

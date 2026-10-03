@@ -1,0 +1,15 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  max-width: 54ch;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+.body p:first-child {
+  color: var(--color-text-strong);
+  font-size: 1.2rem;
+  font-weight: 500;
+}

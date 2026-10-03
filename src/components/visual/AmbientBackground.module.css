@@ -1,0 +1,64 @@
+.ambient {
+  position: absolute;
+  inset: -10% -10% 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.panel {
+  inset: 0;
+  border-radius: inherit;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  will-change: transform;
+  animation: drift 22s var(--ease-editorial) infinite alternate;
+}
+
+.blobAccent {
+  top: -10%;
+  left: 8%;
+  width: 26rem;
+  height: 26rem;
+  background: var(--ambient-accent);
+  animation-duration: 26s;
+}
+
+.blobAsh {
+  top: 20%;
+  right: -8%;
+  width: 22rem;
+  height: 22rem;
+  background: var(--ambient-ash);
+  animation-duration: 32s;
+  animation-direction: alternate-reverse;
+}
+
+.blobAccentSoft {
+  bottom: -18%;
+  left: 30%;
+  width: 20rem;
+  height: 20rem;
+  background: var(--ambient-accent);
+  opacity: 0.6;
+  animation-duration: 20s;
+}
+
+@keyframes drift {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+  to {
+    transform: translate(4%, 6%) scale(1.08);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blob {
+    animation: none;
+  }
+}
