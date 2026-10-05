@@ -10,7 +10,7 @@
   gap: 0.6rem;
   padding: 1.5rem;
   border-radius: var(--radius-md);
-  border: 1px dashed var(--color-border-strong);
+  border: 1px solid var(--color-border);
 }
 
 .cardHead {

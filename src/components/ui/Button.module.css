@@ -8,10 +8,14 @@
   border-radius: var(--radius-sm);
   transition:
     transform var(--duration-fast) var(--ease-editorial),
-    box-shadow var(--duration-fast) var(--ease-editorial),
     background-color var(--duration-fast) var(--ease-editorial),
     border-color var(--duration-fast) var(--ease-editorial),
-    color var(--duration-fast) var(--ease-editorial);
+    color var(--duration-fast) var(--ease-editorial),
+    filter var(--duration-fast) var(--ease-editorial);
+}
+
+.button:active {
+  transform: scale(0.97);
 }
 
 .primary {
@@ -22,8 +26,6 @@
 .primary:hover {
   background: var(--color-accent-solid);
   color: var(--color-text-on-accent);
-  transform: translate(-3px, -3px);
-  box-shadow: var(--shadow-offset);
 }
 
 .accent {
@@ -33,7 +35,6 @@
 
 .accent:hover {
   filter: brightness(1.12);
-  transform: translate(-2px, -2px);
 }
 
 .secondary {
@@ -44,9 +45,7 @@
 
 .secondary:hover {
   border-color: var(--color-text-strong);
-  color: var(--color-text-strong);
-  transform: translate(-3px, -3px);
-  box-shadow: var(--shadow-offset);
+  background: var(--color-bg-elevated);
 }
 
 .ghost {
@@ -61,10 +60,4 @@
 
 .ghost:hover {
   color: var(--color-accent-text);
-}
-
-/* Must come after the variant :hover rules to win the cascade when pressed while hovered */
-.button:active {
-  transform: translate(0, 0) scale(0.97);
-  box-shadow: none;
 }

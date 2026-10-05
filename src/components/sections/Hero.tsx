@@ -4,7 +4,6 @@ import { useIntroDone } from '../../hooks/introContext'
 import { easeEditorial } from '../../lib/motion'
 import { Button } from '../ui/Button'
 import { Container } from '../ui/Container'
-import { AmbientBackground } from '../visual/AmbientBackground'
 import { HeroVisual } from '../visual/HeroVisual'
 import styles from './Hero.module.css'
 
@@ -23,7 +22,6 @@ export function Hero() {
 
   return (
     <section className={styles.hero}>
-      <AmbientBackground />
       <Container className={styles.grid}>
         <div className={styles.copy}>
           <motion.div className={styles.pill} {...rise(0)}>
