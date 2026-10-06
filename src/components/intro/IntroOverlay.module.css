@@ -8,8 +8,7 @@
   justify-content: center;
   gap: 1.25rem;
   padding: 1.5rem;
-  /* Fixed regardless of theme — a brief curtain moment, not a themed surface */
-  background: #141413;
+  background: var(--color-bg);
 }
 
 .line {
@@ -18,14 +17,13 @@
   font-family: var(--font-primary);
   font-weight: 600;
   font-size: clamp(1.4rem, 5vw, 2.1rem);
-  line-height: 1.25;
-  letter-spacing: -0.01em;
-  color: #f6f6f4;
+  line-height: 1.3;
+  color: var(--color-text-strong);
 }
 
 .dot {
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 999px;
-  background: #b7410e;
+  background: var(--color-accent);
 }

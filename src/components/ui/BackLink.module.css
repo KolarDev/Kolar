@@ -1,0 +1,14 @@
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  transition: color var(--duration-fast) var(--ease-editorial);
+}
+
+.link:hover {
+  color: var(--color-accent-text);
+}

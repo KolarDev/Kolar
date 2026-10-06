@@ -27,7 +27,7 @@
 .markerLine {
   width: 1px;
   flex: 1;
-  background: var(--color-border-strong);
+  background: var(--color-accent-border);
   margin-top: 0.25rem;
 }
 

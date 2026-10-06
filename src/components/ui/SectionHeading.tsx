@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { TypeOnText } from './TypeOnText'
 import styles from './SectionHeading.module.css'
 
 type SectionHeadingProps = {
@@ -11,8 +12,6 @@ type SectionHeadingProps = {
 }
 
 export function SectionHeading({ kicker, heading, description, action, level = 'h2' }: SectionHeadingProps) {
-  const Heading = level
-
   return (
     <div className={styles.wrapper}>
       {kicker ? (
@@ -22,7 +21,7 @@ export function SectionHeading({ kicker, heading, description, action, level = '
         </div>
       ) : null}
       <div className={styles.headingRow}>
-        <Heading className={styles.heading}>{heading}</Heading>
+        <TypeOnText as={level} className={styles.heading} text={heading} />
         {action}
       </div>
       {description ? <p className={styles.description}>{description}</p> : null}

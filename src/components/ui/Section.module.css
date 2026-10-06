@@ -6,13 +6,9 @@
   background: var(--color-bg-subtle);
 }
 
+/* Emphasized, not inverted — stays in the current theme, marked out with rust borders instead */
 .inverse {
-  background: var(--color-inverse-bg);
-  color: var(--color-inverse-text);
-}
-
-.inverse :global(h1),
-.inverse :global(h2),
-.inverse :global(h3) {
-  color: var(--color-inverse-text);
+  background: var(--color-bg-subtle);
+  border-top: 1px solid var(--color-accent-border);
+  border-bottom: 1px solid var(--color-accent-border);
 }

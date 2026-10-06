@@ -2,8 +2,8 @@ export const aboutPreview = {
   kicker: '01 — Philosophy',
   heading: "Let's start with who I am.",
   paragraphs: [
-    "I'm a software engineer who cares more about whether a system survives contact with real users than how clever its code looks.",
-    'Most of my work lives across backend systems, full-stack products, infrastructure and — increasingly — AI-powered features, usually for teams who need something that has to work, not just demo well.',
+    "I'm a software engineer. I build things that work well, not just things that look good in a demo.",
+    'I work on backend systems, full-stack products, mobile apps, infrastructure, and AI features — for teams who need software they can trust.',
   ],
 } as const
 

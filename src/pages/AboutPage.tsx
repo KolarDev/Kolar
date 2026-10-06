@@ -1,15 +1,29 @@
+import { motion, useReducedMotion } from 'framer-motion'
 import { Achievements } from '../components/sections/Achievements'
 import { Experience } from '../components/sections/Experience'
 import { Principles } from '../components/sections/Principles'
+import { CloseButton } from '../components/ui/CloseButton'
 import { Reveal } from '../components/ui/Reveal'
 import { Section } from '../components/ui/Section'
 import { SectionHeading } from '../components/ui/SectionHeading'
 import { aboutPage } from '../content/about'
+import { easeEditorial } from '../lib/motion'
 import styles from './AboutPage.module.css'
 
 export function AboutPage() {
+  const shouldReduceMotion = useReducedMotion()
+
   return (
-    <>
+    <motion.div
+      className={styles.sheet}
+      initial={shouldReduceMotion ? undefined : { y: 48, opacity: 0 }}
+      animate={shouldReduceMotion ? undefined : { y: 0, opacity: 1 }}
+      transition={{ duration: 0.5, ease: easeEditorial }}
+    >
+      <div className={styles.closeBar}>
+        <CloseButton label="Close" fallback="/" />
+      </div>
+
       <Section>
         <Reveal>
           <SectionHeading level="h1" kicker="About" heading={aboutPage.heading} />
@@ -47,6 +61,10 @@ export function AboutPage() {
       <Experience />
       <Achievements />
       <Principles />
-    </>
+
+      <div className={styles.endBar}>
+        <CloseButton label="Close and return" fallback="/" />
+      </div>
+    </motion.div>
   )
 }

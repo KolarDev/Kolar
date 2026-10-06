@@ -22,7 +22,7 @@ function App() {
       </a>
       <SiteHeader />
       <main id="main-content">
-        <AnimatePresence mode="wait" initial={false}>
+        <AnimatePresence mode="wait">
           <PageTransition key={location.pathname}>
             <Routes location={location}>
               <Route path="/" element={<HomePage />} />

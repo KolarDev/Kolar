@@ -1,3 +1,4 @@
+import { BackLink } from '../components/ui/BackLink'
 import { Reveal } from '../components/ui/Reveal'
 import { Section } from '../components/ui/Section'
 import { SectionHeading } from '../components/ui/SectionHeading'
@@ -12,6 +13,7 @@ export function ContactPage() {
 
   return (
     <Section>
+      <BackLink label="Back" />
       <Reveal>
         <SectionHeading
           level="h1"

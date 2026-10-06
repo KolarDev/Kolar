@@ -1,4 +1,5 @@
 import { ProjectCard } from '../components/sections/ProjectCard'
+import { BackLink } from '../components/ui/BackLink'
 import { Reveal } from '../components/ui/Reveal'
 import { Section } from '../components/ui/Section'
 import { SectionHeading } from '../components/ui/SectionHeading'
@@ -8,6 +9,7 @@ import styles from './WorkPage.module.css'
 export function WorkPage() {
   return (
     <Section>
+      <BackLink label="Back" />
       <Reveal>
         <SectionHeading
           level="h1"

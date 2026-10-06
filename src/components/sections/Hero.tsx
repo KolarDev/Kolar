@@ -4,6 +4,7 @@ import { useIntroDone } from '../../hooks/introContext'
 import { easeEditorial } from '../../lib/motion'
 import { Button } from '../ui/Button'
 import { Container } from '../ui/Container'
+import { TypeOnText } from '../ui/TypeOnText'
 import { HeroVisual } from '../visual/HeroVisual'
 import styles from './Hero.module.css'
 
@@ -29,9 +30,13 @@ export function Hero() {
             {site.availability}
           </motion.div>
 
-          <motion.h1 className={styles.headline} {...rise(0.08)}>
-            {heroContent.headline}
-          </motion.h1>
+          <TypeOnText
+            as="h1"
+            className={styles.headline}
+            text={heroContent.headline}
+            start={introDone}
+            delay={0.1}
+          />
 
           <motion.p className={styles.description} {...rise(0.16)}>
             {heroContent.description}

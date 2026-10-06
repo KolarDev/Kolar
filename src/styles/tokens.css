@@ -1,45 +1,43 @@
 :root {
   color-scheme: light dark;
 
-  /* Surfaces — true neutral grays, no brown undertone */
-  --color-bg: #ececea;
-  --color-bg-elevated: #f6f6f4;
-  --color-bg-subtle: #e2e2df;
-  --color-bg-muted: #d4d4d0;
+  /* Surfaces — true neutral grays, no brown undertone, deepened so light mode isn't stark */
+  --color-bg: #dcdbd6;
+  --color-bg-elevated: #e8e7e2;
+  --color-bg-subtle: #d2d1cb;
+  --color-bg-muted: #c4c3bc;
 
   /* Text */
   --color-text: #2e2e2c;
   --color-text-strong: #141413;
-  --color-text-muted: #62625f;
+  --color-text-muted: #545349;
   --color-text-on-accent: #fffbf8;
 
-  /* Accent — deep rust, like oxidized iron */
+  /* Accent — deep rust, like oxidized iron. Used generously: borders, labels, emphasis. */
   --color-accent: #b7410e;
   --color-accent-text: #9a3410;
-  --color-accent-on-inverse: #e06a3a;
   --color-accent-solid: #9a3410;
   --color-accent-tint: rgba(183, 65, 14, 0.1);
-  --color-accent-border: rgba(183, 65, 14, 0.35);
+  --color-accent-border: rgba(183, 65, 14, 0.55);
 
-  /* Structural */
-  --color-border: rgba(20, 20, 19, 0.15);
-  --color-border-strong: rgba(20, 20, 19, 0.28);
+  /* Structural — thin, straight, always visible */
+  --color-border: rgba(20, 20, 19, 0.5);
+  --color-border-strong: rgba(20, 20, 19, 0.65);
   --color-inverse-bg: #141413;
   --color-inverse-text: #f6f6f4;
-  --color-inverse-border: rgba(246, 246, 244, 0.14);
 
-  /* Typography — one distinctive primary typeface, used for everything */
-  --font-primary: 'General Sans', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  /* Typography — one typeface, everywhere */
+  --font-primary: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
 
   /* Layout */
   --content-max-width: 72rem;
   --content-padding-inline: clamp(1.25rem, 4vw, 3rem);
   --section-spacing: clamp(4rem, 9vw, 7.5rem);
 
-  /* Radii & elevation — flat and simple: thin straight borders, no shadows */
-  --radius-sm: 0.5rem;
-  --radius-md: 0.75rem;
-  --radius-lg: 1rem;
+  /* Radii — nearly square, straight-edged */
+  --radius-sm: 0.2rem;
+  --radius-md: 0.3rem;
+  --radius-lg: 0.4rem;
 
   /* Motion */
   --ease-editorial: cubic-bezier(0.16, 1, 0.3, 1);
@@ -48,9 +46,36 @@
   --duration-slow: 720ms;
 }
 
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --color-bg: #171717;
+  --color-bg-elevated: #242424;
+  --color-bg-subtle: #1c1c1c;
+  --color-bg-muted: #2e2e2e;
+
+  --color-text: #d9d9d7;
+  --color-text-strong: #f3f3f2;
+  --color-text-muted: #9c9c99;
+  --color-text-on-accent: #fffbf8;
+
+  --color-accent: #e06a3a;
+  --color-accent-text: #e06a3a;
+  --color-accent-solid: #9a3410;
+  --color-accent-tint: rgba(224, 106, 58, 0.14);
+  --color-accent-border: rgba(224, 106, 58, 0.55);
+
+  --color-border: rgba(243, 243, 242, 0.38);
+  --color-border-strong: rgba(243, 243, 242, 0.55);
+  --color-inverse-bg: #f3f3f2;
+  --color-inverse-text: #141413;
+}
+
+/* No-JS fallback: respect system preference when the boot script couldn't run */
 @media (prefers-color-scheme: dark) {
-  :root {
-    /* Neutral dark gray — not crushed black, no brown undertone */
+  :root:not([data-theme]) {
+    color-scheme: dark;
+
     --color-bg: #171717;
     --color-bg-elevated: #242424;
     --color-bg-subtle: #1c1c1c;
@@ -63,15 +88,13 @@
 
     --color-accent: #e06a3a;
     --color-accent-text: #e06a3a;
-    --color-accent-on-inverse: #9a3410;
     --color-accent-solid: #9a3410;
     --color-accent-tint: rgba(224, 106, 58, 0.14);
-    --color-accent-border: rgba(224, 106, 58, 0.4);
+    --color-accent-border: rgba(224, 106, 58, 0.55);
 
-    --color-border: rgba(243, 243, 242, 0.12);
-    --color-border-strong: rgba(243, 243, 242, 0.24);
+    --color-border: rgba(243, 243, 242, 0.38);
+    --color-border-strong: rgba(243, 243, 242, 0.55);
     --color-inverse-bg: #f3f3f2;
     --color-inverse-text: #141413;
-    --color-inverse-border: rgba(20, 20, 19, 0.1);
   }
 }

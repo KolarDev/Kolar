@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { navItems, site } from '../../content/site'
+import { ThemeToggle } from '../theme/ThemeToggle'
 import { Container } from '../ui/Container'
 import styles from './SiteHeader.module.css'
 
@@ -30,17 +31,21 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <button
-          type="button"
-          className={styles.menuToggle}
-          aria-expanded={isMenuOpen}
-          aria-controls="mobile-nav"
-          aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-          onClick={() => setMenuOpen((open) => !open)}
-        >
-          <span className={isMenuOpen ? `${styles.bar} ${styles.barOpenTop}` : styles.bar} />
-          <span className={isMenuOpen ? `${styles.bar} ${styles.barOpenBottom}` : styles.bar} />
-        </button>
+        <div className={styles.actions}>
+          <ThemeToggle />
+
+          <button
+            type="button"
+            className={styles.menuToggle}
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-nav"
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            onClick={() => setMenuOpen((open) => !open)}
+          >
+            <span className={isMenuOpen ? `${styles.bar} ${styles.barOpenTop}` : styles.bar} />
+            <span className={isMenuOpen ? `${styles.bar} ${styles.barOpenBottom}` : styles.bar} />
+          </button>
+        </div>
       </Container>
 
       <nav
