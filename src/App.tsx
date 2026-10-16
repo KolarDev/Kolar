@@ -9,6 +9,7 @@ import { AboutPage } from './pages/AboutPage'
 import { ContactPage } from './pages/ContactPage'
 import { HomePage } from './pages/HomePage'
 import { NotFoundPage } from './pages/NotFoundPage'
+import { WorkDetailPage } from './pages/WorkDetailPage'
 import { WorkPage } from './pages/WorkPage'
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
             <Routes location={location}>
               <Route path="/" element={<HomePage />} />
               <Route path="/work" element={<WorkPage />} />
+              <Route path="/work/:id" element={<WorkDetailPage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="*" element={<NotFoundPage />} />

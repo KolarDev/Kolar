@@ -18,7 +18,7 @@ export function Experience() {
               <span className={styles.markerDot} />
               {index < experience.length - 1 ? <span className={styles.markerLine} /> : null}
             </div>
-            <div className={entry.placeholder ? `${styles.content} ${styles.placeholder}` : styles.content}>
+            <div className={styles.content}>
               <div className={styles.row}>
                 <h3 className={styles.role}>{entry.role}</h3>
                 <span className={styles.period}>{entry.period}</span>

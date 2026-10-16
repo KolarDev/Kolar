@@ -1,9 +1,9 @@
 export const site = {
   name: 'Muhyideen Abdulbasit',
-  role: 'Software Engineer',
+  role: 'Backend Engineer · AI Engineer',
   email: 'muhyideenabdulbasit2@gmail.com',
   availability: 'Open to new projects',
-  location: 'Remote · GMT+1',
+  location: 'Nigeria · Open to remote',
 } as const
 
 export const navItems = [

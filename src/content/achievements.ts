@@ -7,26 +7,24 @@ export type Achievement = {
   id: string
   title: string
   description: string
-  placeholder?: boolean
 }
 
 export const achievements: Achievement[] = [
   {
-    id: 'edusmartix-shipped',
-    title: 'Shipped Edusmartix',
+    id: 'edusmartix-cofounder',
+    title: 'Co-founded Edusmartix',
     description:
-      'Designed and built a multi-tenant school management platform, now used to run real examinations and manage academic records.',
+      'Technical co-founder of a multi-tenant school management platform, now used by Nigerian schools to run real examinations and manage academic records.',
   },
   {
-    id: 'placeholder-1',
-    title: '[ Add a hackathon win, leadership role, or technical milestone ]',
-    description: '[ One sentence on what it was and why it mattered. ]',
-    placeholder: true,
+    id: 'gdgoc-backend-lead',
+    title: 'Backend Lead, GDGoC LAUTECH',
+    description:
+      'Mentoring developers through backend projects, code reviews, architecture discussions and technical sessions, 2025/2026.',
   },
   {
-    id: 'placeholder-2',
-    title: '[ Add another milestone ]',
-    description: '[ One sentence on what it was and why it mattered. ]',
-    placeholder: true,
+    id: 'cgpa',
+    title: '4.29 / 5.00 CGPA',
+    description: 'Bachelor’s degree in Computer Science, Ladoke Akintola University of Technology (LAUTECH).',
   },
 ]

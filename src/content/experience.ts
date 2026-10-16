@@ -9,36 +9,31 @@ export type ExperienceEntry = {
   role: string
   org: string
   summary: string
-  placeholder?: boolean
 }
 
-/**
- * Placeholder timeline — swap in real roles, companies and dates.
- * Kept obviously editable rather than invented.
- */
 export const experience: ExperienceEntry[] = [
   {
-    id: 'current',
-    period: 'Present',
-    role: '[ Your current role ]',
-    org: '[ Company / project name ]',
-    summary: 'Building Edusmartix and related platform work. Replace with your real title and focus.',
-    placeholder: true,
+    id: 'smart-nexus',
+    period: 'Nov 2025 — Present',
+    role: 'Software Engineer',
+    org: 'Smart Nexus Technologies',
+    summary:
+      'Building backend systems for a multi-tenant school management platform with NestJS, PostgreSQL, Prisma, Redis and Docker — APIs, role-based access, academic workflows, result processing and offline exam sync.',
   },
   {
-    id: 'previous-1',
-    period: '[ 20XX – 20XX ]',
-    role: '[ Previous role ]',
-    org: '[ Company name ]',
-    summary: '[ One or two sentences on scope and impact in this role. ]',
-    placeholder: true,
+    id: 'alkious',
+    period: '2025 — 2026',
+    role: 'Backend Developer',
+    org: 'Alkious Technologies',
+    summary:
+      'Built multi-tenant property and construction management services with Django and Django REST Framework — tenant isolation, authentication, role-based access and core business workflows.',
   },
   {
-    id: 'previous-2',
-    period: '[ 20XX – 20XX ]',
-    role: '[ Earlier role ]',
-    org: '[ Company name ]',
-    summary: '[ One or two sentences on scope and impact in this role. ]',
-    placeholder: true,
+    id: 'stanix',
+    period: '2024 — 2025',
+    role: 'Software Developer',
+    org: 'Stanix Consult',
+    summary:
+      'Built and deployed web applications with Node.js, Python and Next.js. Managed multiple VPS deployments and CI/CD workflows with GitHub Actions.',
   },
 ]

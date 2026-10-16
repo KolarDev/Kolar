@@ -15,14 +15,14 @@ export function WorkPage() {
           level="h1"
           kicker="Work"
           heading="Engineering stories, not a tech-stack list."
-          description="Selected projects, framed around the problem they solved and the decisions that made them reliable."
+          description="Selected projects. Open any one for the problem it solved, my role, and the decisions behind it."
         />
       </Reveal>
 
       <div className={styles.list}>
         {projects.map((project, index) => (
           <Reveal key={project.id} delay={index * 0.08}>
-            <ProjectCard project={project} detailed={project.featured} headingLevel="h2" />
+            <ProjectCard project={project} headingLevel="h2" />
           </Reveal>
         ))}
       </div>

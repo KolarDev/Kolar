@@ -12,7 +12,7 @@ export function FeaturedWork() {
       <Reveal>
         <SectionHeading
           kicker="03 — Selected work"
-          heading="Here's what I build."
+          heading="A few things I've built."
           action={
             <Button to="/work" variant="ghost">
               View all work
@@ -23,7 +23,7 @@ export function FeaturedWork() {
 
       <div className={styles.stack}>
         <Reveal>
-          <ProjectCard project={featuredProject} detailed />
+          <ProjectCard project={featuredProject} />
         </Reveal>
 
         {otherProjects.map((project, index) => (

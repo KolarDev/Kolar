@@ -13,11 +13,7 @@ export function Achievements() {
 
       <div className={styles.grid}>
         {achievements.map((achievement, index) => (
-          <Reveal
-            key={achievement.id}
-            delay={index * 0.06}
-            className={achievement.placeholder ? `${styles.card} ${styles.placeholder}` : styles.card}
-          >
+          <Reveal key={achievement.id} delay={index * 0.06} className={styles.card}>
             <h3 className={styles.title}>{achievement.title}</h3>
             <p className={styles.description}>{achievement.description}</p>
           </Reveal>

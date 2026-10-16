@@ -35,13 +35,6 @@
   padding-bottom: 2rem;
 }
 
-.placeholder .role,
-.placeholder .org,
-.placeholder .summary {
-  color: var(--color-text-muted);
-  font-style: italic;
-}
-
 .row {
   display: flex;
   flex-wrap: wrap;
