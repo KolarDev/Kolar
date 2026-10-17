@@ -38,6 +38,14 @@ export function SiteFooter() {
           <a href={`mailto:${site.email}`} className={styles.socialLink} aria-label="Email" title="Email">
             <SocialIcon icon="email" />
           </a>
+          <a
+            href={`tel:${site.phone.replace(/\s/g, '')}`}
+            className={styles.socialLink}
+            aria-label="Phone"
+            title="Phone"
+          >
+            <SocialIcon icon="phone" />
+          </a>
         </div>
 
         <div className={styles.meta}>

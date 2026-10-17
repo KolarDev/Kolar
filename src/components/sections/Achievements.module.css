@@ -5,17 +5,54 @@
 }
 
 .card {
-  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  padding: 1.75rem;
   border-radius: var(--radius-md);
   background: var(--color-bg-subtle);
+  border: 1px solid var(--color-accent-border);
+  transition: border-color var(--duration-fast) var(--ease-editorial);
+}
+
+.card:hover {
+  border-color: var(--color-accent);
+}
+
+.watermark {
+  position: absolute;
+  top: -0.5rem;
+  right: 0.25rem;
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-accent);
+  opacity: 0.08;
+  pointer-events: none;
+  user-select: none;
+}
+
+.iconBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin-bottom: 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-accent-border);
+  background: var(--color-bg-elevated);
+  color: var(--color-accent-text);
+  font-size: 1.2rem;
 }
 
 .title {
+  position: relative;
   font-size: 1.05rem;
   margin-bottom: 0.5rem;
 }
 
 .description {
+  position: relative;
   font-size: 0.9375rem;
   line-height: 1.6;
   color: var(--color-text-muted);

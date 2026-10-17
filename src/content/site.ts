@@ -2,6 +2,7 @@ export const site = {
   name: 'Muhyideen Abdulbasit',
   role: 'Backend Engineer · AI Engineer',
   email: 'muhyideenabdulbasit2@gmail.com',
+  phone: '+234 811 278 9308',
   availability: 'Open to new projects',
   location: 'Nigeria · Open to remote',
 } as const

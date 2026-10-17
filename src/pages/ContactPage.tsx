@@ -9,6 +9,12 @@ import styles from './ContactPage.module.css'
 export function ContactPage() {
   const channels = [
     { label: 'Email', value: site.email, href: `mailto:${site.email}`, icon: 'email' as const },
+    {
+      label: 'Phone',
+      value: site.phone,
+      href: `tel:${site.phone.replace(/\s/g, '')}`,
+      icon: 'phone' as const,
+    },
     ...socialLinks.map((social) => ({
       label: social.label,
       value: social.href.replace('https://', ''),
