@@ -21,8 +21,8 @@ export function TypeOnText({ text, as: Tag = 'span', className, delay = 0, start
   const characters = Array.from(text)
   const isControlled = start !== undefined
   const triggerProps = isControlled
-    ? { animate: start ? { opacity: 1, y: 0 } : undefined }
-    : { whileInView: { opacity: 1, y: 0 }, viewport: { once: true, margin: '-40px' } }
+    ? { animate: start ? { opacity: 1 } : undefined }
+    : { whileInView: { opacity: 1 }, viewport: { once: true, margin: '0px' } }
 
   return (
     <Tag className={className} aria-label={text}>
@@ -30,12 +30,11 @@ export function TypeOnText({ text, as: Tag = 'span', className, delay = 0, start
         <motion.span
           key={index}
           aria-hidden="true"
-          style={{ display: 'inline-block' }}
-          initial={{ opacity: 0, y: '0.3em' }}
+          initial={{ opacity: 0 }}
           {...triggerProps}
-          transition={{ duration: 0.22, delay: delay + index * 0.022, ease: 'easeOut' }}
+          transition={{ duration: 0.18, delay: delay + index * 0.022, ease: 'easeOut' }}
         >
-          {char === ' ' ? ' ' : char}
+          {char === ' ' ? ' ' : char}
         </motion.span>
       ))}
     </Tag>

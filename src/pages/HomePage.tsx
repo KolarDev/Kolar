@@ -18,11 +18,11 @@ export function HomePage() {
       <AboutPreview />
       <WhatIBuild />
       <FeaturedWork />
-      <CaseStudies />
+      <Experience />
       <Lab />
       <Writing />
       <GithubSection />
-      <Experience />
+      <CaseStudies />
       <Achievements />
       <Principles />
       <ContactCta />

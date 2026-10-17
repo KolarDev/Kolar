@@ -20,11 +20,17 @@ export const achievements: Achievement[] = [
     id: 'gdgoc-backend-lead',
     title: 'Backend Lead, GDGoC LAUTECH',
     description:
-      'Mentoring developers through backend projects, code reviews, architecture discussions and technical sessions, 2025/2026.',
+      'Leading backend mentorship at Google Developer Groups on Campus (GDGoC) LAUTECH — code reviews, architecture discussions and technical sessions, 2025/2026.',
   },
   {
-    id: 'cgpa',
-    title: '4.29 / 5.00 CGPA',
-    description: 'Bachelor’s degree in Computer Science, Ladoke Akintola University of Technology (LAUTECH).',
+    id: 'hackathon-wins',
+    title: '3-time hackathon winner',
+    description: 'Won first place in three hackathons, building working products against the clock.',
+  },
+  {
+    id: 'university-of-ibadan-tools',
+    title: 'Built internal tools for a major Nigerian university',
+    description:
+      'Built software and networking tools for the University of Ibadan, one of Nigeria’s largest universities, during a six-month industrial training.',
   },
 ]

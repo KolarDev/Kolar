@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { navItems, site, socialLinks } from '../../content/site'
 import { Container } from '../ui/Container'
+import { SocialIcon } from '../ui/SocialIcon'
 import styles from './SiteFooter.module.css'
 
 export function SiteFooter() {
@@ -22,12 +23,20 @@ export function SiteFooter() {
 
         <div className={styles.socials}>
           {socialLinks.map((social) => (
-            <a key={social.label} href={social.href} target="_blank" rel="noreferrer" className={styles.socialLink}>
-              {social.label}
+            <a
+              key={social.label}
+              href={social.href}
+              target="_blank"
+              rel="noreferrer"
+              className={styles.socialLink}
+              aria-label={social.label}
+              title={social.label}
+            >
+              <SocialIcon icon={social.icon} />
             </a>
           ))}
-          <a href={`mailto:${site.email}`} className={styles.socialLink}>
-            Email
+          <a href={`mailto:${site.email}`} className={styles.socialLink} aria-label="Email" title="Email">
+            <SocialIcon icon="email" />
           </a>
         </div>
 

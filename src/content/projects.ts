@@ -72,6 +72,51 @@ export const projects: Project[] = [
     technologies: ['LLM APIs', 'RAG', 'Voice AI', 'Transcription', 'Python', 'FastAPI'],
     featured: false,
   },
+  {
+    id: 'tweet-audit',
+    name: 'Tweet Audit',
+    tag: 'AI content moderation',
+    summary:
+      'A backend tool that audits an exported X (Twitter) archive against content rules using Google’s Gemini AI, flagging tweets for review and exporting the results to CSV.',
+    problem:
+      'Reviewing thousands of tweets against content and tone rules doesn’t scale by hand. Doing it with AI means handling rate limits, bad model output and interruptions — without losing progress or starting over.',
+    role: 'Backend engineer. Built the processing pipeline and the reliability layer around the AI calls.',
+    solution: [
+      'Rate-limited requests to Gemini (about one per second), with exponential backoff and jitter on retries.',
+      'Checkpointing every few records, so an interrupted run resumes instead of starting over.',
+      'Graceful shutdown on interrupt signals, so progress is saved even if the process is stopped mid-run.',
+      'Structured, JSON-mode AI output, with provider errors mapped into predictable application-level errors.',
+      'Tested at real scale — a full run against an archive of 4,941 tweets, including checkpoint recovery and interrupted-run handling.',
+    ],
+    decisions: [
+      'What happens when the AI service rate-limits or times out? — requests back off exponentially with jitter instead of retrying immediately.',
+      'What happens if the process is killed mid-run? — progress is checkpointed, so resuming picks up where it left off instead of re-auditing from zero.',
+    ],
+    technologies: ['TypeScript', 'Google Gemini API', 'CSV export'],
+    featured: false,
+  },
+  {
+    id: 'payment-gateway',
+    name: 'Payment Gateway',
+    tag: 'Payments backend',
+    summary:
+      'A payment gateway sitting between an e-commerce order service and a mock bank — handling authorize, capture, void and refund, with strict state transitions.',
+    problem:
+      'Payment systems can’t tolerate ambiguity. A duplicate request must never double-charge, and a payment must never move into a state it shouldn’t — like capturing something already voided.',
+    role: 'Backend engineer. Designed the payment state machine, the bank integration, and the transaction data model.',
+    solution: [
+      'An explicit state machine (pending → authorized → captured → refunded, or voided) that rejects any transition that isn’t valid for the payment’s current state.',
+      'Idempotency keys on every operation, so a retried request from a flaky client can never create a duplicate charge.',
+      'A bank client that maps the mock bank’s responses and failures into the gateway’s own payment workflow.',
+      'Amounts stored as integer cents, not floating-point currency, to avoid rounding errors in money math.',
+    ],
+    decisions: [
+      'How do you stop a double-charge from a retried request? — every operation carries an idempotency key, checked before it reaches the bank.',
+      'How do you stop an invalid state change, like capturing a voided payment? — transitions are only allowed from specific states, enforced by the state machine itself, not by trusting the caller.',
+    ],
+    technologies: ['NestJS', 'TypeScript', 'PostgreSQL', 'Prisma', 'Docker'],
+    featured: false,
+  },
 ]
 
 export const featuredProject = projects.find((project) => project.featured) ?? projects[0]

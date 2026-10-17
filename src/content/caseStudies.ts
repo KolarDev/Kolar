@@ -1,5 +1,5 @@
 export const caseStudiesSection = {
-  kicker: '04 — Case studies',
+  kicker: '07 — Case studies',
   heading: "Let's go underneath the interface.",
   description:
     'A few of the questions that shaped how Edusmartix is built, and what answering them actually involved.',

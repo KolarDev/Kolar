@@ -15,9 +15,9 @@ export const navItems = [
 ] as const
 
 export const socialLinks = [
-  { label: 'GitHub', href: 'https://github.com/' },
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/' },
-  { label: 'X', href: 'https://x.com/' },
+  { label: 'GitHub', href: 'https://github.com/KolarDev', icon: 'github' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/abdulbasit-muhyideen-8138a22a1', icon: 'linkedin' },
+  { label: 'X', href: 'https://x.com/Kolar_Dev', icon: 'x' },
 ] as const
 
 export const heroContent = {

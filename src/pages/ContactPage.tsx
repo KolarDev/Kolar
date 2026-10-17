@@ -2,13 +2,19 @@ import { BackLink } from '../components/ui/BackLink'
 import { Reveal } from '../components/ui/Reveal'
 import { Section } from '../components/ui/Section'
 import { SectionHeading } from '../components/ui/SectionHeading'
+import { SocialIcon } from '../components/ui/SocialIcon'
 import { site, socialLinks } from '../content/site'
 import styles from './ContactPage.module.css'
 
 export function ContactPage() {
   const channels = [
-    { label: 'Email', value: site.email, href: `mailto:${site.email}` },
-    ...socialLinks.map((social) => ({ label: social.label, value: social.href.replace('https://', ''), href: social.href })),
+    { label: 'Email', value: site.email, href: `mailto:${site.email}`, icon: 'email' as const },
+    ...socialLinks.map((social) => ({
+      label: social.label,
+      value: social.href.replace('https://', ''),
+      href: social.href,
+      icon: social.icon,
+    })),
   ]
 
   return (
@@ -26,9 +32,20 @@ export function ContactPage() {
       <Reveal delay={0.08}>
         <div className={styles.grid}>
           {channels.map((channel) => (
-            <a key={channel.label} href={channel.href} className={styles.card} target={channel.href.startsWith('http') ? '_blank' : undefined} rel={channel.href.startsWith('http') ? 'noreferrer' : undefined}>
-              <span className={styles.label}>{channel.label}</span>
-              <span className={styles.value}>{channel.value}</span>
+            <a
+              key={channel.label}
+              href={channel.href}
+              className={styles.card}
+              target={channel.href.startsWith('http') ? '_blank' : undefined}
+              rel={channel.href.startsWith('http') ? 'noreferrer' : undefined}
+            >
+              <span className={styles.icon}>
+                <SocialIcon icon={channel.icon} />
+              </span>
+              <span className={styles.cardText}>
+                <span className={styles.label}>{channel.label}</span>
+                <span className={styles.value}>{channel.value}</span>
+              </span>
             </a>
           ))}
         </div>

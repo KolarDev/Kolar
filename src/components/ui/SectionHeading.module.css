@@ -34,7 +34,7 @@
 
 .heading {
   font-size: clamp(1.5rem, 3vw, 2.25rem);
-  line-height: 1.2;
+  line-height: 1.35;
 }
 
 .description {
